@@ -20,7 +20,7 @@ public class PostAuthorized {
     @Step("I request POST authorized account")
     public void reqPostAuthorized(){
         JSONObject requestData = new JSONObject();
-        requestData.put("userName", "andre3333");
+        requestData.put("userName", "andre1234567");
         requestData.put("password", "Password1234!");
 
         given().header("Content-Type", "application/json")
@@ -31,7 +31,7 @@ public class PostAuthorized {
     @Step("I request POST authorized account with invalid password")
     public void reqInvalidPostAuthorized(){
         JSONObject requestData = new JSONObject();
-        requestData.put("userName", "andre3333");
+        requestData.put("userName", "andre1234567");
         requestData.put("password", "pass");
 
         given().header("Content-Type", "application/json")
@@ -47,7 +47,7 @@ public class PostAuthorized {
     @Step("I request POST authorized account without password")
     public void reqInvalidPostAuthorizedPass(){
         JSONObject requestData = new JSONObject();
-        requestData.put("userName", "andre3333");
+        requestData.put("userName", "andre1234567");
         requestData.put("password", "");
 
         given().header("Content-Type", "application/json")

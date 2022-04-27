@@ -22,7 +22,7 @@ public class Post {
     @Step("I request POST detail user")
     public void requestPostDetailUser(){
         JSONObject reqData = new JSONObject();
-        reqData.put("userName", "andre3333");
+        reqData.put("userName", "andre1234567");
         reqData.put("password", "Password1234!");
 
         SerenityRest.given().header("Content-Type", "application/json").body(reqData.toJSONString());
@@ -36,7 +36,7 @@ public class Post {
 
     @Step("validate the data detail after create user")
     public void validateDataDetail(){
-        SerenityRest.then().body("username", equalTo("andre3333"));
+        SerenityRest.then().body("username", equalTo("andre1234567"));
     }
 
     @Step("get UserID for other request")
@@ -50,7 +50,7 @@ public class Post {
     @Step("I request POST detail user with invalid password")
     public void requestInvalidPost(){
         JSONObject requestData = new JSONObject();
-        requestData.put("userName", "andreas");
+        requestData.put("userName", "andre1234567");
         requestData.put("password", "test");
 
         given().header("Content-Type", "application/json")
@@ -66,7 +66,7 @@ public class Post {
     @Step("I request POST detail user with the username and password that was already registered")
     public void requestRegisteredPost(){
         JSONObject requestData = new JSONObject();
-        requestData.put("userName", "andre330");
+        requestData.put("userName", "andre1234567");
         requestData.put("password", "Password1234!");
 
         given().header("Content-Type", "application/json")
@@ -82,7 +82,7 @@ public class Post {
     @Step("I request POST detail user with the username and password that was already registered")
     public void requestRegisteredUserPost(){
         JSONObject requestData = new JSONObject();
-        requestData.put("userName", "andre330");
+        requestData.put("userName", "andre1234567");
         requestData.put("password", "Password1234!");
 
         given().header("Content-Type", "application/json")

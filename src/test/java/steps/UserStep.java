@@ -38,9 +38,9 @@ public class UserStep {
         postAuthorized.reqPostAuthorized();
     }
 
-    @Then("I validate the authorized status code is {int}")
+    @Then("I validate the authorized status code is {201}")
     public void iValidateTheAuthorizedStatusCodeIs(int arg0) {
-        get.validateStatusCode(200);
+        get.validateStatusCode(arg0);
     }
 
     @And("validate the data detail after authorized account")
